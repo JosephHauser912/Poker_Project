@@ -1,0 +1,26 @@
+import random
+
+suit = ["Sp", "He", "Cl", "Di"]
+deck = {"Num": [], "Suit": []}
+
+
+for num in range(1,11):
+    for type in suit:
+        card = "{}{}".format(num, type)
+        deck.append(card)
+
+player1 = random.choice(deck)
+player2 = random.choice(deck)
+
+
+def war(player1, player2):
+    if player1>player2:
+        print(player1, player2)
+        print("Player1 wins")
+    elif player2>player1:
+        print(player1, player2)
+        print("Player2 wins")
+    else:
+        print("It's a tie, play again.")  
+
+war(player1, player2)
